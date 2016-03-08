@@ -83,6 +83,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StatisticsSystem_Calculate\Calculate.csproj">
+      <Project>{dca19dd4-a06e-4546-9734-e6c0e32e2df4}</Project>
+      <Name>Calculate</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

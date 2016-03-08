@@ -91,6 +91,16 @@
     <Compile Include="ZN_YYBB.cs" />
     <Compile Include="ZN_YYBB_List.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StatisticsSystem_DAL\DAL.csproj">
+      <Project>{f5c7ee45-e2a3-4a77-8364-67d8b4786d58}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StatisticsSystem_Model\Model.csproj">
+      <Project>{cdeb6b36-4f6e-4f28-bbca-5949f6fa215c}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
