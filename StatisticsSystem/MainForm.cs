@@ -386,7 +386,7 @@ namespace StatisticsSystem
       form.ShowDialog();
     }
     #endregion
-
+    public void test() { }
 
   }
 }
