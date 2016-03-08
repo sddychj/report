@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D35260F-FBD7-4D8D-BF25-65BCF29EFE83}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StatisticsSystem</RootNamespace>
+    <AssemblyName>StatisticsSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/StatisticsSystem/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hb2000.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJSON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check\CheckConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check\CheckConfigForm.Designer.cs">
+      <DependentUpon>CheckConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check\CheckConfigFormCol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check\CheckConfigFormCol.Designer.cs">
+      <DependentUpon>CheckConfigFormCol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check\CheckEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check\CheckEditForm.Designer.cs">
+      <DependentUpon>CheckEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check\CheckEditFormCol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check\CheckEditFormCol.Designer.cs">
+      <DependentUpon>CheckEditFormCol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check\CheckTableQuote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check\CheckTableQuote.Designer.cs">
+      <DependentUpon>CheckTableQuote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Arithmetic.cs" />
+    <Compile Include="Classes\CharList.cs" />
+    <Compile Include="Classes\FormulaCheck.cs" />
+    <Compile Include="Classes\InitCell.cs" />
+    <Compile Include="Classes\LongTimeWork.cs" />
+    <Compile Include="Classes\Path.cs" />
+    <Compile Include="Classes\SaveCell.cs" />
+    <Compile Include="DWPersonConfig\DwChoiceColForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DWPersonConfig\DwChoiceColForm.Designer.cs">
+      <DependentUpon>DwChoiceColForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DWPersonConfig\DWChoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DWPersonConfig\DWChoiceForm.Designer.cs">
+      <DependentUpon>DWChoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\FormulaConditionChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formula\FormulaConditionChoice.Designer.cs">
+      <DependentUpon>FormulaConditionChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\FormulaConfigFormCol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formula\FormulaConfigFormCol.Designer.cs">
+      <DependentUpon>FormulaConfigFormCol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\FormulaEditFormCol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formula\FormulaEditFormCol.Designer.cs">
+      <DependentUpon>FormulaEditFormCol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConfig\ChangePwdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemConfig\ChangePwdForm.Designer.cs">
+      <DependentUpon>ChangePwdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConfig\DWChoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemConfig\DWChoiceForm.Designer.cs">
+      <DependentUpon>DWChoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConfig\DWPersonConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemConfig\DWPersonConfig.Designer.cs">
+      <DependentUpon>DWPersonConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DWPersonConfig\DW_ColConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DWPersonConfig\DW_ColConfigForm.Designer.cs">
+      <DependentUpon>DW_ColConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DWPersonConfig\DW_ZBBBMConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DWPersonConfig\DW_ZBBBMConfigForm.Designer.cs">
+      <DependentUpon>DW_ZBBBMConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConfig\DatabaseConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemConfig\DatabaseConfigForm.Designer.cs">
+      <DependentUpon>DatabaseConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConfig\DWZBBMChoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemConfig\DWZBBMChoiceForm.Designer.cs">
+      <DependentUpon>DWZBBMChoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConfig\TableTypeConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemConfig\TableTypeConfigForm.Designer.cs">
+      <DependentUpon>TableTypeConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableConfig\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableConfig\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConfig\ExportExcelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemConfig\ExportExcelForm.Designer.cs">
+      <DependentUpon>ExportExcelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fetch\FetchConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fetch\FetchConfigForm.Designer.cs">
+      <DependentUpon>FetchConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fetch\FetchEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fetch\FetchEditForm.Designer.cs">
+      <DependentUpon>FetchEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\FormulaConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formula\FormulaConfigForm.Designer.cs">
+      <DependentUpon>FormulaConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\FormulaEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formula\FormulaEditForm.Designer.cs">
+      <DependentUpon>FormulaEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\frm_RowMergerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\frm_RowMergerView.Designer.cs">
+      <DependentUpon>frm_RowMergerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\frm_Cell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\frm_Cell.Designer.cs">
+      <DependentUpon>frm_Cell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\frm_GridHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\frm_GridHeader.Designer.cs">
+      <DependentUpon>frm_GridHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableConfig\NewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableConfig\NewForm.Designer.cs">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableConfig\OpenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableConfig\OpenForm.Designer.cs">
+      <DependentUpon>OpenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\RowMergeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Test\RowMergeView.designer.cs">
+      <DependentUpon>RowMergeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\TableQuoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formula\TableQuoteForm.Designer.cs">
+      <DependentUpon>TableQuoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordExport\WordConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordExport\WordConfigForm.Designer.cs">
+      <DependentUpon>WordConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordExport\WordEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordExport\WordEditForm.Designer.cs">
+      <DependentUpon>WordEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordExport\WordFormulaConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordExport\WordFormulaConfigForm.Designer.cs">
+      <DependentUpon>WordFormulaConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordExport\WordTableQuoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordExport\WordTableQuoteForm.Designer.cs">
+      <DependentUpon>WordTableQuoteForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check\CheckConfigForm.resx">
+      <DependentUpon>CheckConfigForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check\CheckConfigFormCol.resx">
+      <DependentUpon>CheckConfigFormCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check\CheckEditForm.resx">
+      <DependentUpon>CheckEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check\CheckEditFormCol.resx">
+      <DependentUpon>CheckEditFormCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check\CheckTableQuote.resx">
+      <DependentUpon>CheckTableQuote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DWPersonConfig\DwChoiceColForm.resx">
+      <DependentUpon>DwChoiceColForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DWPersonConfig\DWChoiceForm.resx">
+      <DependentUpon>DWChoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\FormulaConditionChoice.resx">
+      <DependentUpon>FormulaConditionChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\FormulaConfigFormCol.resx">
+      <DependentUpon>FormulaConfigFormCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\FormulaEditFormCol.resx">
+      <DependentUpon>FormulaEditFormCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemConfig\ChangePwdForm.resx">
+      <DependentUpon>ChangePwdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemConfig\DWChoiceForm.resx">
+      <DependentUpon>DWChoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemConfig\DWPersonConfig.resx">
+      <DependentUpon>DWPersonConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DWPersonConfig\DW_ColConfigForm.resx">
+      <DependentUpon>DW_ColConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DWPersonConfig\DW_ZBBBMConfigForm.resx">
+      <DependentUpon>DW_ZBBBMConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemConfig\DatabaseConfigForm.resx">
+      <DependentUpon>DatabaseConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemConfig\DWZBBMChoiceForm.resx">
+      <DependentUpon>DWZBBMChoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemConfig\TableTypeConfigForm.resx">
+      <DependentUpon>TableTypeConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableConfig\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemConfig\ExportExcelForm.resx">
+      <DependentUpon>ExportExcelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fetch\FetchConfigForm.resx">
+      <DependentUpon>FetchConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fetch\FetchEditForm.resx">
+      <DependentUpon>FetchEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\FormulaConfigForm.resx">
+      <DependentUpon>FormulaConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\FormulaEditForm.resx">
+      <DependentUpon>FormulaEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\frm_RowMergerView.resx">
+      <DependentUpon>frm_RowMergerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\frm_Cell.resx">
+      <DependentUpon>frm_Cell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\frm_GridHeader.resx">
+      <DependentUpon>frm_GridHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableConfig\NewForm.resx">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableConfig\OpenForm.resx">
+      <DependentUpon>OpenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Test\RowMergeView.resx">
+      <DependentUpon>RowMergeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\TableQuoteForm.resx">
+      <DependentUpon>TableQuoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordExport\WordConfigForm.resx">
+      <DependentUpon>WordConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordExport\WordEditForm.resx">
+      <DependentUpon>WordEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordExport\WordFormulaConfigForm.resx">
+      <DependentUpon>WordFormulaConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordExport\WordTableQuoteForm.resx">
+      <DependentUpon>WordTableQuoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCELL50Lib">
+      <Guid>{7802D41A-28B0-43C4-95EA-17B7E32337D1}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CELL50Lib">
+      <Guid>{7802D41A-28B0-43C4-95EA-17B7E32337D1}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hb2000.ico" />
+    <Content Include="Resources\3901001_143117089903_2.jpg" />
+    <None Include="Resources\headerbg.jpg" />
+    <None Include="Resources\loginbg.jpg" />
+    <None Include="Resources\2012082023013090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{e3d8759a-c5eb-402d-9f10-f5c6029a8d1a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StatisticsSystem_BLL\BLL.csproj">
+      <Project>{96509b21-d811-49d4-9412-67b3eda1c87f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StatisticsSystem_DAL\DAL.csproj">
+      <Project>{f5c7ee45-e2a3-4a77-8364-67d8b4786d58}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StatisticsSystem_Model\Model.csproj">
+      <Project>{cdeb6b36-4f6e-4f28-bbca-5949f6fa215c}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
