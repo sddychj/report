@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DBUtility.Properties" GeneratedClassName="Settings1">
+  <Profiles />
+  <Settings>
+    <Setting Name="conn_oracle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=(DESCRIPTION=
+         (ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.66.237.3)(PORT=1521)))
+         (CONNECT_DATA=(SERVICE_NAME=ORA10G)));
+         User Id=hbgctj;Password=hbgctj;</Value>
+    </Setting>
+    <Setting Name="conn_access" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\华北工程公司统计\StatisticsSystem\StatisticsSystem_DAL\StatisticsSystem.mdb;Persist Security Info=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

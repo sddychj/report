@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xiaov.Core", "Core\Xiaov.Core.csproj", "{B7A25405-3AAB-4B39-BE5F-6D8C36A8C4A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtilityOdp", "DBUtility\DBUtilityOdp.csproj", "{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,16 @@ Global
 		{B7A25405-3AAB-4B39-BE5F-6D8C36A8C4A8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B7A25405-3AAB-4B39-BE5F-6D8C36A8C4A8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B7A25405-3AAB-4B39-BE5F-6D8C36A8C4A8}.Release|x86.ActiveCfg = Release|Any CPU
+		{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8317E3AD-9F77-4CAD-8A9A-1F0BE3C7D33B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
